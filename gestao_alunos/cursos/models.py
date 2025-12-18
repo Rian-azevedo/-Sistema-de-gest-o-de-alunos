@@ -15,5 +15,6 @@ class Curso(models.Model):
     
     def __str__(Self):
         return f"{self.nome} ({self.codigo})"
+    
 # Create your models here.
 
