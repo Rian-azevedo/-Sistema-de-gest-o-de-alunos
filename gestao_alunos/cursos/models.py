@@ -5,15 +5,14 @@ class Curso(models.Model):
     nome = models.CharField(max_length=100)
     codigo = models.CharField(max_length=20, unique=True)
     carga_horaria = models.PositiveIntegerField()
-    Professor = models.ForeignKey(
+    professor = models.ForeignKey(
         Professor,
         on_delete=models.SET_NULL,
         null=True,
         blank=True
     )
     
-    
-    def __str__(Self):
+    def __str__(self):
         return f"{self.nome} ({self.codigo})"
     
 # Create your models here.
